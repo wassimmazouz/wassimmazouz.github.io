@@ -1,64 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benchmark Results</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-3278327-4']);
+		_gaq.push(['_trackPageview']);
 
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	<title>Wassim MAZOUZ</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
-<body>
-    <header>
-        <h1>Benchmark Results</h1>
-    </header>
-    <main>
-        <p>Click on the links below to view the benchmark results:</p>
-        <ul>
-            <li><a href="benchmarks/benchmark_linreg.html">Linear Regression Benchmark</a></li>
-            <li><a href="benchmarks/benchmark_logreg.html">Logistic Regression Benchmark</a></li>
-            <li><a href="benchmarks/benchmark_generalized.html"> Unified Benchmark</a></li>
-            <li><a href="benchmarks/benchmark_lsmr_tom_nosparsity.html"> Newton-LSMR Modified Tom Benchmark</a></li>
-            <li><a href="benchmarks/benchmark_lsmr_poisson.html"> Newton-LSMR Poisson Benchmark</a></li>
-            <li><a href="benchmarks/benchmark_lsmr.html"> Newton-LSMR Benchmark</a></li>
-            <!-- Add more benchmark links as needed -->
-        </ul>
-    </main>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo"><strong>Welcome</strong> to
+						my homepage!</a>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/wassimmazouz/" class="icon fa-linkedin"><span
+									class="label">Linkedin</span></a></li>
+						<li><a href="https://github.com/wassimmazouz" class="icon fa-github"><span
+									class="label">Github</span></a></li>
+					</ul>
+				</header>
+
+				<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h1>Wassim Mazouz</h1>
+						</header>
+						<p> Final-year student at <a href="https://www.ec-lyon.fr/en"><b>Centrale Lyon</b></a> in
+							Mathematics and Risk Engineering
+							<br>
+							Intern at the <a href="https://team.inria.fr/ockham/team-members/"><b>OCKHAM</b></a> Team
+							working on optimization algorithms benchmarking with the <a
+								href="https://benchopt.github.io/"><b>Benchopt</b></a> framework
+						</p>
+					</div>
+					<div class="image">
+						<img src="images/self.png" alt="" />
+					</div>
+				</section>
+
+				<!-- Section -->
+				<section>
+					<header id="vitae" class="major">
+						<h2>Curriculum</h2>
+					</header>
+					<div class="table-wrapper">
+						<table>
+							<tbody>
+								</tr>
+								<td>2024-2025</td>
+								<td>Double Master's student at <a href="https://www.ec-lyon.fr/en">ISFA</a> in the <a
+										href="https://isfa.univ-lyon1.fr/formation/econometrie-statistiques/programme-du-parcours-graf">GRAF</a>
+									program</td>
+								</tr>
+								</tr>
+								<td>2021-2025</td>
+								<td>Engineering student at <a href="https://www.ec-lyon.fr/en">Centrale Lyon</a></td>
+								</tr>
+								<tr>
+									<td>2019-2021</td>
+									<td>Mathematics and Physics student (MPSI-MP*) at <a
+											href="https://lm6e.ma/presentation-cpge">Lyc&eacute;e Mohammed VI
+											d'Excellence</a></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<!-- Benchmark Results Section -->
+				<section>
+					<header id="benchmark-results" class="major">
+						<h2>Benchmark Results</h2>
+					</header>
+					<div class="table-wrapper">
+						<table>
+							<tbody>
+								<tr>
+									<td><a href="https://wassimmazouz.github.io/benchmarks/benchmark_generalized.html">Logistic
+											and Linear Regressions Benchmark</a></td>
+								</tr>
+								<tr>
+									<td><a href="https://wassimmazouz.github.io/benchmarks/benchmark_lsmr.html">Logistic
+											and Poisson Regressions Benchmark (with Newton-LSMR)</a></td>
+								</tr>
+								<tr>
+									<td><a href="https://wassimmazouz.github.io/benchmarks/benchmark_lsmr_poisson.html">Influence
+											of sparsity on the Newton-LSMR solver</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+
+				<!-- Section -->
+				<section>
+					<header id="contact" class="major">
+						<h2>Contact</h2>
+					</header>
+
+					<ul class="contact">
+						<li class="fa-envelope-o"><a href="#">wassim.mazouz01 (at) gmail.com</a></li>
+						<li class="fa-phone">+33 (0)6 58 14 81 46 </li>
+					</ul>
+				</section>
+
+
+			</div>
+		</div>
+
+
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+
+
+
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="#vitae">Curriculum</a></li>
+						<li><a href="#benchmark">Benchmark Results</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+
+
+				<!-- Section -->
+				<section>
+					<!--<header class="major">-->
+					<!--	<h2>Get in touch</h2>-->
+					<!--</header>-->
+					<ul class="contact">
+						<li class="fa-envelope-o">wassim.mazouz (at) etu.ec-lyon.fr</li>
+						</li>
+					</ul>
+				</section>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
