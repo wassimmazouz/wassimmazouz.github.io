@@ -1,10 +1,7 @@
-# wassimmazouz.github.io
-Wassim Mazouz, final year engineering student
+# <a href="https://ilyasmoutawwakil.github.io" target="_blank">IlyasMoutawwakil.github.io</a>
 
+My personal website portfolio built using the template of <a href="https://github.com/smaranjitghose/awesome-portfolio-websites" target="_blank">awesome-portfolio-websites</a>.
 
+Quite amusing if you're bored of the single-pdf-page resume.
 
-
-
-
-
-Inspired from Yohann DE CASTRO's [website](https://ydecastro.github.io/)
+I'll also use it as a base website to link my future projects to it.
