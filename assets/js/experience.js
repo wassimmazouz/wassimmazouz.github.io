@@ -1,121 +1,120 @@
 AOS.init();
 
-//  Work experience cards
+// Work experience cards (only NEW roles)
 
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "Data Science Intern",
-    cardImage: "./assets/images/experience-page/sysnav.png",
-    place: "SYSNAV",
-    time: "(July, 2021 - Present)",
+    title: "Quantitative Research Intern",
+    cardImage: "./assets/images/experience-page/bnp-cib.png",
+    place: "BNP Paribas CIB – Global Markets Data & AI Lab",
+    time: "(Apr 2025 – Sept 2025 · Frankfurt, DE)",
     desp: `
-    As part of the <b>Traffic Security</b> team, my missions were as follows:
-    <ul>
-    <li><b>Retrieval, Processing and Visualization</b> of data from the <b>ELK Stack</b>.</li>
-    <li><b>Exploratory Data Analysis</b> of hundreds of millions of <b>Spatio-Temporal Data</b> points.</li>
-    <li>Study of <b>Statistical Forcasting</b> algorithms (parameterized and non parameterized).</li>
-    <li><b>Fine-Tuning</b> these algorithms for performance metrics Forecasting.</li>
-    <li><b>Deployment</b> of a platform (DashBoard) for <b>Monitoring, Visualisation and Forecasting</b>.</li>
-    </ul>
+      <ul>
+        <li>Built <b>stochastic-control</b> models for hedging under <b>transaction costs</b> using <b>RL + Monte Carlo</b> on FX options.</li>
+        <li>Developed <b>pricing & risk libraries</b> in <b>Python/C++</b> for high-frequency streams; calibrated <b>stochastic vol</b> on intraday surfaces.</li>
+        <li>Backtested vs <b>delta-hedging</b> benchmarks, improving <b>downside-risk</b> metrics by <b>15%</b> across vol regimes.</li>
+      </ul>
     `,
   },
   {
-    title: "Website Administrator",
-    cardImage: "./assets/images/experience-page/automatants.png",
-    place: "Automatants - Association d'IA de CentraleSupélec",
-    time: "(January, 2020 - December, 2020)",
+    title: "Quantitative Research Intern – OCKHAM Team",
+    cardImage: "./assets/images/experience-page/ens-lyon.png",
+    place: "ENS Lyon – CNRS/INRIA",
+    time: "(May 2024 – Aug 2024 · Lyon, FR)",
     desp: `
-    On the campus of the <b>University of Paris Saclay</b>, I was responsible for:
-    <ul>
-    <li><b>Maintaining & Developping</b> the association's website.</li>
-    <li>Co-organising the association's annual event <b>Soirée de l'IA</b>.</li>
-    <li>Organising a <b>Lecture & Tutorial</b> about <b>CNN architectures</b>.</li>
-    <li>Organising a <b>Workshop</b> about the use of the <b>Google Colab</b>.</li>
-    </ul>
+      <ul>
+        <li>Designed <b>large-scale optimization benchmarks</b> (convex & stochastic) for solver comparison in <b>quant model calibration</b>.</li>
+        <li>Extended <b>Benchopt</b> to finance use-cases (regression-based pricing, <b>vol surface</b> fitting).</li>
+        <li>Shipped <b>reproducible experiments</b> & analytical modules adopted by partner quant teams.</li>
+      </ul>
+    `,
+  },
+  {
+    title: "Research Assistant – Generative Modeling",
+    cardImage: "./assets/images/experience-page/liris.png",
+    place: "LIRIS Laboratory – École Centrale de Lyon",
+    time: "(Sept 2023 – Apr 2024 · Lyon, FR)",
+    desp: `
+      <ul>
+        <li>Used <b>VQ-VAE</b> to simulate <b>correlated patterns</b>; explored links to <b>random-field</b> theory.</li>
+        <li>Built Python modules for <b>preprocessing</b>, training, and <b>Monte Carlo</b> evaluation on large-scale image datasets.</li>
+        <li>Published <b>reproducible code</b> & numerical experiments for quantitative validation.</li>
+      </ul>
     `,
   },
 ];
 
 const showCards1 = () => {
   let output = "";
-  exp.forEach(
-    ({ title, cardImage, place, time, desp }) =>
-    (output += `        
+  exp.forEach(({ title, cardImage, place, time, desp }) => {
+    output += `        
     <div class="col gaap" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="400"> 
       <div class="card card1" style="height:350px">
-        <img src="${cardImage}" class="featured-image"/>
+        <img src="${cardImage}" class="featured-image" alt="${title} logo"/>
         <article class="card-body">
           <header>
-            <div class="title">
-              <h3>${title}</h3>
-            </div>
+            <div class="title"><h3>${title}</h3></div>
             <p class="meta">
               <span class="pre-heading">${place}</span><br>
               <span class="author">${time}</span>
             </p>
-            <ol>
-              ${desp}
-            </ol>
+            ${desp}
           </header>
         </article>
       </div>
-    </div>
-      `)
-  );
+    </div>`;
+  });
   experiencecards.innerHTML = output;
 };
 document.addEventListener("DOMContentLoaded", showCards1);
 
-// Volunteership Cards
+// Volunteership Cards (Benchopt)
 
 const volunteership = document.querySelector(".volunteership");
 const volunteershipcards = [
   {
-    title: "sktime",
-    cardImage:
-      "./assets/images/experience-page/sktime.jpg",
-    description: "A unified framework for Time Series Analysis and Machine Learning.",
+    title: "Benchopt",
+    cardImage: "./assets/images/experience-page/benchopt.png",
+    description: "Open-source benchmarking framework for optimization algorithms; extended for quant finance use-cases.",
   },
 ];
 
 const showCards2 = () => {
   let output = "";
-  volunteershipcards.forEach(
-    ({ title, cardImage, description }) =>
-    (output += `        
+  volunteershipcards.forEach(({ title, cardImage, description }) => {
+    output += `        
       <div class="card volunteerCard" data-aos="fade-down" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="600" style="height:500px ;width:400px">
-      <img src="${cardImage}" height="250" width="65" class="card-img" style="border-radius:10px">
-      <div class="content">
+        <img src="${cardImage}" height="250" width="65" class="card-img" style="border-radius:10px" alt="${title}">
+        <div class="content">
           <h2 class="volunteerTitle">${title}</h2><br>
-          <p class="copy">${description}</p></div>
-      </div>
-      `)
-  );
+          <p class="copy">${description}</p>
+        </div>
+      </div>`;
+  });
   volunteership.innerHTML = output;
 };
 document.addEventListener("DOMContentLoaded", showCards2);
 
-// Hackathon Section
+// Community / Sprint Section (Benchopt Coding Sprint)
 
 const hackathonsection = document.querySelector(".hackathon-section");
 const mentor = [
   {
-    title: "Huawei European University Challenge 2020",
-    subtitle: "Finalist",
-    image: "./assets/images/experience-page/huawei.png",
-    desp: "I participated alongside other great members of the Automatants Association to this DataThon where we learned a lot about optical modeling and used state of the art Deep Learning architectures to perform this task.",
+    title: "Benchopt Coding Sprint – June 2024",
+    subtitle: "Contributor",
+    image: "./assets/images/experience-page/benchopt-sprint.jfif",
+    desp: "Contributed benchmarking tasks & fixes; improved finance-oriented objectives and CI reliability during the June 2024 sprint.",
   },
 ];
 
 const showCards3 = () => {
   let output = "";
-  mentor.forEach(
-    ({ title, image, subtitle, desp }) =>
-    (output += `  
+  mentor.forEach(({ title, image, subtitle, desp }) => {
+    output += `  
       <div class="blog-slider__item swiper-slide">
         <div class="blog-slider__img">
-            <img src="${image}" alt="">
+          <img src="${image}" alt="${title}">
         </div>
         <div class="blog-slider__content">
           <div class="blog-slider__title">${title}</div>
@@ -123,9 +122,8 @@ const showCards3 = () => {
           <div class="blog-slider__text">${desp}</div>
           <a href="#" class="blog-slider__button">Read More</a>   
         </div>
-      </div>
-      `)
-  );
+      </div>`;
+  });
   hackathonsection.innerHTML = output;
 };
 document.addEventListener("DOMContentLoaded", showCards3);

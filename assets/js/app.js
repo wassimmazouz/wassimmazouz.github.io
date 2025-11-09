@@ -4,7 +4,7 @@
 
 let header = $(`
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
-<a class="navbar-brand" href="index.html">Ilyas Moutawwakil </a>
+<a class="navbar-brand" href="index.html">Wassim Mazouz </a>
 <div class="hamburger_wrapper navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
   <div id="js-hamburger" class="hamburger">
@@ -130,7 +130,7 @@ let footer = $(`
              <div class="form-header">
                 <h6 class="display">Get in Touch</h6>
               </div>
-                <form action="https://formcarry.com/s/xyVDQlrqL1E" method="POST" accept-charset="UTF-8" >
+                <form action="https://formcarry.com/s/_TLOxwKBx_e" method="POST" accept-charset="UTF-8" >
                   <input type="text" name="name" placeholder="Your Name" required/>
                   <input type="email" name="email" placeholder="Email Address"  required/>
                   <textarea name="message" placeholder="Type your Message" required></textarea>
