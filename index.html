@@ -6,6 +6,16 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<style>
+	  /* minimal extras for tags/cards; safe alongside main.css */
+	  .tags { margin-top: .5rem; }
+	  .tag { display:inline-block; padding:.2rem .55rem; margin:0 .3rem .3rem 0; font-size:.85rem; border:1px solid #e3e3e3; border-radius:999px; background:#fafafa; }
+	  .projects-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:1.25rem; }
+	  .project-card { border:1px solid #eee; border-radius:10px; background:#fff; padding:1rem; height:100%; display:flex; flex-direction:column; }
+	  .project-card h3 { margin:0 0 .35rem 0; }
+	  .project-card p { margin:0 0 .75rem 0; }
+	  .project-links a { text-decoration: underline; }
+	</style>
 </head>
 
 <body class="is-preload">
@@ -21,10 +31,8 @@
 				<header id="header">
 					<a href="index.html" class="logo"><strong>Welcome</strong> to my homepage!</a>
 					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/wassimmazouz/" class="icon fa-linkedin"><span
-									class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/wassimmazouz" class="icon fa-github"><span
-									class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/wassimmazouz/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/wassimmazouz" class="icon fa-github"><span class="label">GitHub</span></a></li>
 					</ul>
 				</header>
 
@@ -66,7 +74,7 @@
 					</div>
 				</section>
 
-				<!-- Section -->
+				<!-- Curriculum -->
 				<section>
 					<header id="vitae" class="major">
 						<h2>Curriculum</h2>
@@ -76,8 +84,7 @@
 							<tbody>
 								<tr>
 									<td>Apr. 2025 - Sept. 2025</td>
-									<td>AI & Quantitative Research Intern at BNP Paribas Global Markets - Data & AI Lab,
-										Frankfurt</td>
+									<td>AI & Quantitative Research Intern at BNP Paribas Global Markets - Data & AI Lab, Frankfurt</td>
 								</tr>
 								<tr>
 									<td>May. 2024 - Aug. 2024</td>
@@ -104,7 +111,137 @@
 					</div>
 				</section>
 
-				<!-- Section -->
+				<!-- Projects -->
+				<section id="projects">
+					<header class="major">
+						<h2>Projects</h2>
+					</header>
+
+					<div class="projects-grid">
+						<!-- 2048 — C++ Implementation -->
+						<article class="project-card">
+							<h3>2048 — C++ Implementation</h3>
+							<p>Recreated the 2048 puzzle with a clean, testable core engine (state, compression/merge, scoring), deterministic seeding, undo, and a lightweight TUI. Unit tests cover chains, no-move states, and spawn logic.</p>
+							<div class="tags">
+								<span class="tag">C++</span><span class="tag">STL</span><span class="tag">OOP</span><span class="tag">Unit Testing</span>
+							</div>
+							<div class="project-links">
+								<a href="https://github.com/wassimmazouz/2048-cpp" target="_blank" rel="noopener">GitHub ↗</a>
+							</div>
+						</article>
+
+						<!-- Ant Colony Optimization for Route Planning -->
+						<article class="project-card">
+							<h3>Ant Colony Optimization for Route Planning</h3>
+							<p>Bio-inspired routing with pheromone evaporation/reinforcement balancing exploration vs exploitation; efficient convergence and visualizations across graph topologies.</p>
+							<div class="tags">
+								<span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Optimization</span>
+							</div>
+							<div class="project-links">
+								<a href="https://github.com/wassimmazouz/ant-colony-routing" target="_blank" rel="noopener">GitHub ↗</a>
+							</div>
+						</article>
+
+						<!-- Benchopt — Scalable Optimization Benchmarking -->
+						<article class="project-card">
+							<h3>Benchopt — Scalable Optimization Benchmarking</h3>
+							<p>Contributions improving cross-platform compatibility and reproducibility; added features for performance tracking during the June 2024 coding sprint.</p>
+							<div class="tags">
+								<span class="tag">Python</span><span class="tag">Benchopt</span><span class="tag">Optimization</span><span class="tag">Reproducible Research</span><span class="tag">Open Source</span>
+							</div>
+							<div class="project-links">
+								<a href="https://github.com/benchopt/benchopt" target="_blank" rel="noopener">Upstream ↗</a>
+								<span> • </span>
+								<a href="https://benchopt.github.io" target="_blank" rel="noopener">Website ↗</a>
+							</div>
+						</article>
+
+						<!-- Credit Default Swap Pricing — Intensity vs Structural Models -->
+						<article class="project-card">
+							<h3>CDS Pricing — Intensity vs Structural Models</h3>
+							<p>Comparative framework with Merton-type models and Cox processes; Monte Carlo sensitivity to intensity, recovery, and volatility; calibration trade-offs highlighted.</p>
+							<div class="tags">
+								<span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">Monte Carlo</span><span class="tag">Credit Risk</span><span class="tag">Quant Finance</span>
+							</div>
+							<div class="project-links">
+								<a href="https://github.com/wassimmazouz/CDS-pricing" target="_blank" rel="noopener">GitHub ↗</a>
+							</div>
+						</article>
+
+						<!-- Exotic Options Pricing in Heston–Hull–White Framework -->
+						<article class="project-card">
+							<h3>Exotic Options Pricing — Heston–Hull–White</h3>
+							<p>Pricing engine for lookback, Asian, and barrier options under joint stochastic vol & rates; Monte Carlo optimization and calibration to CAC40/EURIBOR data.</p>
+							<div class="tags">
+								<span class="tag">Python</span><span class="tag">Monte Carlo</span><span class="tag">Heston</span><span class="tag">Hull–White</span><span class="tag">Quant Finance</span>
+							</div>
+							<div class="project-links">
+								<a href="https://github.com/hanaa-chkaf/exotic-options-pricing" target="_blank" rel="noopener">GitHub ↗</a>
+							</div>
+						</article>
+
+						<!-- nanochat — Custom Extension of Karpathy’s Minimal Chatbot -->
+						<article class="project-card">
+							<h3>nanochat — Minimal Chatbot Extensions</h3>
+							<p>Extended Karpathy’s nanochat for multi-turn dialogue; improved preprocessing/tokenization, training stability, and lightweight evaluation/sampling tools.</p>
+							<div class="tags">
+								<span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">GPT-style</span><span class="tag">Tokenization</span><span class="tag">NLP</span>
+							</div>
+							<div class="project-links">
+								<a href="https://github.com/wassimmazouz/nanochat-modified" target="_blank" rel="noopener">GitHub ↗</a>
+								<span> • </span>
+								<a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener">Original ↗</a>
+							</div>
+						</article>
+
+						<!-- Wave Function Collapse with VQ-VAE Compression -->
+						<article class="project-card">
+							<h3>Wave Function Collapse + VQ-VAE</h3>
+							<p>Integrated a learned discrete latent space (VQ-VAE) with WFC to accelerate constraint propagation and boost diversity while preserving structure.</p>
+							<div class="tags">
+								<span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">VQ-VAE</span><span class="tag">WFC</span><span class="tag">Generative</span>
+							</div>
+							<div class="project-links">
+								<a href="https://github.com/wassimmazouz/VQ-VAE-Wave-Function-Collapse-Map-Synthesizer" target="_blank" rel="noopener">GitHub ↗</a>
+							</div>
+						</article>
+
+						<!-- MLOps / Data Science Initiation Project -->
+						<article class="project-card">
+							<h3>MLOps / Data Science Starter</h3>
+							<p>Entry-level DS project scaffold: data ingestion & EDA, a simple training pipeline, Dockerized service for inference, and CI for lint/tests. Focus on DevOps/MLOps hygiene.</p>
+							<div class="tags">
+								<span class="tag">Python</span><span class="tag">Docker</span><span class="tag">Shell</span><span class="tag">CI</span><span class="tag">MLOps</span>
+							</div>
+							<div class="project-links">
+								<a href="https://github.com/wassimmazouz" target="_blank" rel="noopener">Template ↗</a>
+							</div>
+						</article>
+					</div>
+				</section>
+
+				<!-- Skills (optional) -->
+				<section id="skills">
+					<header class="major">
+						<h2>Skills</h2>
+					</header>
+					<p><strong>Programming:</strong> Python (pandas, NumPy, scikit-learn, PyTorch), SQL, Git, Linux</p>
+					<p><strong>Quant/DS:</strong> Time-series, bandits, optimization (Benchopt), backtesting, risk & pricing</p>
+					<p><strong>Tooling:</strong> Jupyter, Docker, CI/CD (basics)</p>
+				</section>
+
+				<!-- Publications / Talks (optional) -->
+				<section id="pubs">
+					<header class="major">
+						<h2>Publications & Talks</h2>
+					</header>
+					<ul>
+						<li><strong>Deep Hedging with Frictions (talk)</strong> — Internal seminar, BNP Paribas Global Markets, 2025</li>
+						<li><strong>Benchopt Coding Sprint</strong> — Contributor, June 2024</li>
+					</ul>
+				</section>
+
+				<!-- Contact -->
 				<section>
 					<header id="contact" class="major">
 						<h2>Contact</h2>
@@ -129,11 +266,14 @@
 					</header>
 					<ul>
 						<li><a href="#vitae">Curriculum</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#pubs">Publications & Talks</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
 
-				<!-- Section -->
+				<!-- Secondary contact -->
 				<section>
 					<ul class="contact">
 						<li class="fa-envelope-o">wassim.mazouz (at) etu.ec-lyon.fr</li>
